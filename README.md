@@ -27,7 +27,7 @@ Special Chars   → +15 pts
 Length Bonus    → +5-10 pts
 **MAX: 100/100**
 
-<h1>🎮 How It Works</h1>h1>
+<h1>🎮 How It Works</h1>
 1. Enter any password (or press Enter for demo)
 2. Get detailed analysis + strength score
 3. Receive 3 AUTO-GENERATED strong passwords
