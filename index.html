@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔐 Password Strength Tester</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-shield-alt"></i> Smart Password Tester</h1>
+            <p>Analyze your password & get 3 ultra-strong suggestions instantly!</p>
+        </header>
+
+        <main>
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="input-group">
+                    <label for="passwordInput">
+                        <i class="fas fa-key"></i> Enter Password to Test
+                    </label>
+                    <div class="input-wrapper">
+                        <input type="password" id="passwordInput" placeholder="Type your password...">
+                        <button id="toggleVisibility" class="toggle-btn">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button id="analyzeBtn" class="analyze-btn">
+                            <i class="fas fa-magic"></i> Analyze
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analysis Results -->
+            <section id="analysisSection" class="results-section hidden">
+                <h2><i class="fas fa-chart-line"></i> Your Password Analysis</h2>
+                
+                <!-- Criteria Checkboxes -->
+                <div class="criteria-grid">
+                    <div class="criterion">
+                        <i class="fas fa-ruler"></i> Length (8+)
+                        <span class="status" id="lengthStatus">-</span>
+                    </div>
+                    <div class="criterion">
+                        <i class="fas fa-font"></i> Uppercase
+                        <span class="status" id="uppercaseStatus">-</span>
+                    </div>
+                    <div class="criterion">
+                        <i class="fas fa-font"></i> Lowercase
+                        <span class="status" id="lowercaseStatus">-</span>
+                    </div>
+                    <div class="criterion">
+                        <i class="fas fa-hashtag"></i> Numbers
+                        <span class="status" id="digitsStatus">-</span>
+                    </div>
+                    <div class="criterion">
+                        <i class="fas fa-exclamation-triangle"></i> Special
+                        <span class="status" id="specialStatus">-</span>
+                    </div>
+                </div>
+
+                <!-- Strength Score -->
+                <div class="strength-score">
+                    <div class="score-circle" id="scoreCircle">
+                        <span id="scoreValue">0</span>
+                        <span>/100</span>
+                    </div>
+                    <div class="strength-label" id="strengthLabel">Testing...</div>
+                </div>
+            </section>
+
+            <!-- Generated Passwords -->
+            <section id="suggestionsSection" class="suggestions-section hidden">
+                <h2><i class="fas fa-lightbulb"></i> Top 3 Strong Passwords</h2>
+                <div class="password-suggestions" id="passwordSuggestions">
+                    <!-- Generated dynamically -->
+                </div>
+                <button id="generateMoreBtn" class="generate-more-btn">
+                    <i class="fas fa-sync-alt"></i> Generate More
+                </button>
+            </section>
+        </main>
+
+        <footer>
+            <p><i class="fas fa-lock"></i> Stay Secure! | Made with ❤️ in C + HTML/CSS/JS</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
